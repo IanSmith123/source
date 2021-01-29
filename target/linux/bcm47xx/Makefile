@@ -12,7 +12,7 @@ BOARDNAME:=Broadcom BCM47xx/53xx (MIPS)
 FEATURES:=squashfs usb
 SUBTARGETS:=generic mips74k legacy
 
-KERNEL_PATCHVER:=4.19
+KERNEL_PATCHVER:=5.4
 KERNEL_TESTING_PATCHVER:=5.4
 
 define Target/Description
@@ -22,7 +22,6 @@ endef
 include $(INCLUDE_DIR)/target.mk
 
 DEFAULT_PACKAGES += swconfig nvram otrx \
-	kmod-leds-gpio kmod-gpio-button-hotplug \
-	kmod-ledtrig-default-on kmod-ledtrig-timer kmod-ledtrig-netdev
+	kmod-leds-gpio kmod-gpio-button-hotplug
 
 $(eval $(call BuildTarget))
